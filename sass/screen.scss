@@ -1,0 +1,96 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Imports
+@import "compass/reset";
+
+
+// Variables
+$dblue: #05365D; // dark blue
+$green: #9CC53A; // green
+$blue: #3482BE; // blue
+$gray: #F1F1F1; // grey
+$black: #000000; // black
+$border: #e0e0e0;
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	color: $black;
+	background-color: $gray;
+	font-family: 'Open Sans',Arial,sans-serif;
+
+	a {
+		text-decoration: none;
+	}
+
+	a:active,
+	a:focus,
+	a:visited {
+		color: $blue;
+	}
+
+	hr {
+		margin: 0;
+		padding: 0;
+	}
+
+	// MAIN QUESTIONS
+
+	#questions {
+		font-size: 0.95em;
+		margin-top: 100px;
+		width: 75%;
+
+		header {
+			h1 {
+				margin-bottom: 0.8em;
+				font-size: 1.2em;
+				display: inline-block;
+			}
+
+			button {
+				float: right;
+			}
+		}
+
+		h3 {
+			margin-bottom: 1.45em;
+			color: $green;
+			font-size: 0.83em;
+		}
+
+		.question {
+			padding: 1em 0em 0.45em 0;
+			border-top: 1px solid $border;
+			border-bottom: 1px solid $border;
+			overflow: hidden;
+
+			.post_tags {
+				float: left;
+				font-size: 0.657em;
+
+				a {
+					background-color: gainsboro;
+					padding: 0.2em 0.4em;
+					margin: 0 0.1em;
+				}
+			}
+
+			.info {
+
+				.author {
+					float: right;
+					color: #999;
+					font-size: 0.62em;
+				}
+			}
+		}
+
+		.question:first-child {
+			border-bottom: none;
+		}
+	}
+}
