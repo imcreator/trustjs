@@ -2,7 +2,7 @@
 	
 	<header>
 		<h1>Ostatnie:</h1>
-		<button>Dodaj pytanie</button>
+		<button><a href=<?php echo esc_url( home_url( '/index.php/dodaj-pytanie/' ) ); ?>>Dodaj pytanie</a></button>
 	</header>
 
 	<?php while ( have_posts() ) : the_post(); ?>

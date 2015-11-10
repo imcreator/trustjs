@@ -140,3 +140,15 @@ body #questions .question .info .author {
 body #questions .question:first-child {
   border-bottom: none;
 }
+/* line 102, ../sass/screen.scss */
+body #question_form input {
+  width: 60%;
+}
+/* line 108, ../sass/screen.scss */
+body #question_form #tagsLive .tags_name {
+  background-color: gainsboro;
+  padding: 0.2em 0.4em;
+  margin: 0 0.1em;
+  float: left;
+  font-size: 0.657em;
+}

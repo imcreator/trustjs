@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The main template file.
@@ -11,7 +12,6 @@
  *
  * @package trustjs
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -42,8 +42,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
-
+		<?php endif; wp_reset_query(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

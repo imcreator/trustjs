@@ -93,4 +93,25 @@ body {
 			border-bottom: none;
 		}
 	}
+
+	// QUESTION FORM 
+
+	#question_form {
+		
+
+		input {
+			width: 60%;
+		}
+
+		#tagsLive {
+			
+			.tags_name {
+				background-color: gainsboro;
+				padding: 0.2em 0.4em;
+				margin: 0 0.1em;
+				float: left;
+				font-size: 0.657em;
+			}
+		}
+	}
 }

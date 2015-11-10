@@ -116,7 +116,7 @@ add_action( 'widgets_init', 'trustjs_widgets_init' );
 function trustjs_scripts() {
 	wp_enqueue_style( 'trustjs-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'trustjs-compass', get_template_directory_uri() . '/stylesheets/screen.css' );
+	wp_enqueue_style( 'editor', get_template_directory_uri() . '/stylesheets/editor.css' );
 
 	wp_enqueue_script( 'trustjs-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -125,6 +125,26 @@ function trustjs_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if( is_page_template( 'page-templates/page-form.php' ) ) {
+		// CSS
+		wp_enqueue_style( 'bootstrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' );
+		wp_enqueue_style( 'font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+		wp_enqueue_style( 'flickui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css' );
+		wp_enqueue_style( 'jquery-tagit', get_template_directory_uri() . '/stylesheets/jquery.tagit.css' );
+		
+		// JS
+		wp_enqueue_script( 'jqueryEditor', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'jqueryui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'bootstrapjs', 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'editorjs', get_template_directory_uri() . '/js/editor.js', array(), '1.0', true );
+		wp_enqueue_script( 'tagit', get_template_directory_uri() . '/js/tag-it.min.js', array(), '1.0', true );
+	}
+
+	// MAIN CSS
+	wp_enqueue_style( 'trustjs-compass', get_template_directory_uri() . '/stylesheets/screen.css' );
+
+	// MAIN JS
+	wp_enqueue_script( 'tagit-js', get_template_directory_uri() . '/js/trust.js', array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'trustjs_scripts' );
 
